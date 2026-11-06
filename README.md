@@ -2,6 +2,12 @@
 
 A small reader-facing product demonstration accompanying [the article](https://y9yk.bearblog.dev/ai-sales-query-metric-definition-experiment/). Every run executes the actual pinned **sutura 0.11.0** binary against synthetic commerce data. No live LLM, model key or external database is needed.
 
+## Live demonstration
+
+[Open the public demo](https://sutura-sales-demo.vercel.app/) or its [compact surface](https://sutura-sales-demo.vercel.app/embed).
+
+Production was built on Vercel Container Runtime from a Git archive of commit `d4fc631`, uploaded through Vercel Drop. All seven actual-engine public HTTP scenarios were checked. This deployment is not connected to Git autodeploy; connect the repository or use Vercel CLI for subsequent releases.
+
 ## Run locally
 
 Docker must already be running.
