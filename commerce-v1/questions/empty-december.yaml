@@ -1,0 +1,10 @@
+{
+  "metrics": [
+    "booked_net_sales_cents"
+  ],
+  "grain": "month",
+  "range": {
+    "start": "2026-12-01",
+    "end": "2027-01-01"
+  }
+}

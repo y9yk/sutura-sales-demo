@@ -1,0 +1,11 @@
+.git
+tests
+__pycache__
+**/__pycache__
+*.pyc
+backend*.json
+DESIGN.md
+IMPLEMENTATION.md
+*.log
+.env*
+.vercel

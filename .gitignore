@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+.vercel/
+artifacts/
+*.log
+.DS_Store
+/backend-*.json

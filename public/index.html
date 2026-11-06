@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Run the same synthetic sales questions through comparison SQL and the real sutura engine. Inspect results, definitions and refusals.">
+  <title>Which October sales? — sutura demo</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#comparison">Skip to the comparison</a>
+  <div class="page">
+    <header class="masthead">
+      <a class="brand" href="/" aria-label="Sutura sales demonstration home"><span class="brand-mark" aria-hidden="true"></span>sutura <span class="brand-tail">/ sales demo</span></a>
+      <nav aria-label="Related resources"><a href="https://y9yk.bearblog.dev/ai-sales-query-metric-definition-experiment/" target="_blank" rel="noopener">Read the article ↗</a><a id="repository" href="#reproduce">Source &amp; setup</a></nav>
+    </header>
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">REAL ENGINE · SYNTHETIC DATA</p>
+      <h1 id="page-title">What does 'October sales' include?</h1>
+      <p class="lede">Run a sales question through comparison SQL and <strong>the actual sutura runtime</strong>. See the calculation, the definition behind it, and the requests the product refuses.</p>
+      <p class="disclosure">The SQL controls are written for this demonstration. They are labeled where intentionally incomplete. This page makes no live LLM calls.</p>
+    </section>
+    <main id="comparison" tabindex="-1">
+      <div class="workspace">
+        <aside class="scenarios" aria-labelledby="scenario-heading">
+          <div class="section-label"><span>01</span><h2 id="scenario-heading">Choose a question</h2></div>
+          <div id="scenario-list" class="scenario-list" aria-label="Comparison scenarios"><p class="muted">Loading scenarios…</p></div>
+        </aside>
+        <section class="experiment" aria-labelledby="question-heading">
+          <div class="question-box">
+            <div class="question-top"><p class="eyebrow">THE QUESTION</p><span class="engine" id="engine-label">Connecting to demo…</span></div>
+            <h2 id="question-heading">Choose a scenario to begin</h2>
+            <p id="question-description" class="muted"></p>
+            <button id="run" class="primary" type="button" disabled>Run comparison <span aria-hidden="true">→</span></button>
+            <p id="run-status" class="run-status" role="status" aria-live="polite">Waiting for the scenario catalog.</p>
+          </div>
+          <div class="results" id="results" aria-label="Comparison results">
+            <article class="result-card" id="baseline-card">
+              <div class="card-top"><span class="eyebrow">COMPARISON SQL</span><span id="baseline-state" class="state">Not run</span></div>
+              <h3 id="baseline-label">The SQL control</h3>
+              <div id="baseline-output" class="output"><p class="placeholder">The selected control will appear here.</p></div>
+              <details><summary>Inspect comparison SQL</summary><pre><code id="baseline-sql">Run the comparison to inspect the statement.</code></pre></details>
+            </article>
+            <article class="result-card product-card" id="product-card">
+              <div class="card-top"><span class="eyebrow">ACTUAL SUTURA</span><span id="product-state" class="state">Not run</span></div>
+              <h3>Declared metric, executed by the product</h3>
+              <div id="product-output" class="output"><p class="placeholder">Each run executes the pinned product binary.</p></div>
+              <details><summary>Inspect sutura SQL &amp; parameters</summary><pre><code id="product-sql">Run the comparison to inspect the compiled statement.</code></pre></details>
+              <details><summary>Inspect definition &amp; raw result</summary><pre><code id="product-evidence">No execution yet.</code></pre></details>
+            </article>
+          </div>
+          <section id="finding" class="finding" aria-labelledby="finding-title" hidden>
+            <p class="eyebrow">WHAT TO NOTICE</p><h3 id="finding-title">Read the result in context</h3><div id="finding-body"></div>
+          </section>
+        </section>
+      </div>
+      <section class="understanding" aria-labelledby="preparation-heading">
+        <div class="section-label"><span>02</span><h2 id="preparation-heading">What was prepared first?</h2></div>
+        <p>Refunds were summed into one row per order before sutura ran. Whole-order WIDGET membership was also prepared. The product executes the declared metric; it does not invent the refund policy or repair these source joins for us.</p>
+        <details id="data-details"><summary>Inspect the synthetic source data</summary><div class="data-tabs" id="data-tabs" role="group" aria-label="Source tables"></div><div id="data-output" class="table-scroll"><p class="muted">Open to load the source fixture.</p></div></details>
+      </section>
+      <section class="reproduce" id="reproduce" aria-labelledby="reproduce-heading">
+        <div class="section-label"><span>03</span><h2 id="reproduce-heading">Reproduce &amp; interpret</h2></div>
+        <p>Fixed questions, 14 synthetic orders, and a pinned sutura 0.11.0 release. Known-answer anchors, catalog digests, and explicit refusals are inspected here. This is a product demonstration, not evidence of improved LLM accuracy.</p>
+        <p><a id="source-bottom" href="https://github.com/telekom/sutura" target="_blank" rel="noopener">sutura upstream ↗</a> <span class="separator">/</span> <a href="https://y9yk.bearblog.dev/ai-sales-query-metric-definition-experiment/" target="_blank" rel="noopener">Context, method &amp; limitations ↗</a></p>
+        <p class="small muted">The original article's 108 model trials are separate from this live engine demonstration. Empty results remain empty; no recorded answer is substituted for a failed request.</p>
+      </section>
+    </main>
+    <footer>Built to make the definition visible. <a href="https://github.com/telekom/sutura" target="_blank" rel="noopener">Powered by sutura</a></footer>
+  </div>
+</body>
+</html>

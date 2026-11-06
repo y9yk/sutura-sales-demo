@@ -1,0 +1,17 @@
+{
+  "metrics": [
+    "booked_net_sales_cents"
+  ],
+  "grain": "month",
+  "range": {
+    "start": "2026-10-01",
+    "end": "2026-11-01"
+  },
+  "filters": [
+    {
+      "op": "eq",
+      "dimension": "status",
+      "value": "pending"
+    }
+  ]
+}

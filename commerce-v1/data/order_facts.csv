@@ -1,0 +1,15 @@
+order_id,customer_id,invoice_date,status,is_test,gross_cents,net_cents,contains_widget,is_production
+1,1,2026-09-30,paid,false,10000,9000,no,true
+2,1,2026-10-01,paid,false,10000,8000,yes,true
+3,2,2026-10-05,paid,false,8000,7000,yes,true
+4,1,2026-10-10,pending,false,6000,6000,no,true
+5,2,2026-10-11,paid,true,5000,5000,no,false
+6,1,2026-10-12,paid,false,4000,4000,no,true
+7,2,2026-10-15,paid,false,9000,8500,yes,true
+8,1,2026-10-20,paid,false,3000,2500,no,true
+9,2,2026-10-25,paid,false,3000,0,no,true
+10,2,2026-10-31,paid,false,10000,7500,no,true
+11,1,2026-11-01,paid,false,10000,9000,no,true
+12,2,2026-11-05,paid,false,8000,8000,no,true
+13,2,2026-11-10,cancelled,false,7000,7000,no,true
+14,1,2026-10-07,failed,false,2000,2000,no,true
